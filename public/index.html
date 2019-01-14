@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload Test</title>
+    <style type="text/css">
+      div .file_upload {
+          opacity: 1;
+          position: absolute;
+          left: 0;
+          top: 0;
+      }
+
+
+    </style>
+</head>
+<body>
+
+<div>
+    <input type="file" class="file_upload" id="fileUpload" />
+</div>
+
+
+
+
+</body>
+<script src="js/jquery-v3.3.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+
+   });
+
+   //create Blob object
+   var newFile = new Blob([""]);
+   newFile["name"] = "test";
+
+   console.log("name : " + newFile["name"]);
+   console.log("size : " + newFile.size);
+
+   var fakeFile = newFile;
+   console.log("File attributes: " + fakeFile.name  + "File Size: " +  fakeFile.size );
+
+   var inputFile = document.getElementById('fileUpload');
+   console.log("Input File : " + inputFile );
+
+</script>
+
+
+</html>
